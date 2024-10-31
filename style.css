@@ -95,7 +95,6 @@ h1 {
 }
 .task-container span:last-child {
   background-color: #f0013c;
-  text-decoration: line-through;
 }
 .delete-all {
   background-color: #0082d8;
