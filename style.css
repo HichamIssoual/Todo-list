@@ -4,5 +4,154 @@
 body {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(135deg, #2c3e50, #34495e);
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+.todo-app-container {
+  width: 800px;
+  margin: 50px auto;
+  background-image: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.todo-app-container .create-todo {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.todo-app-container .create-todo input {
+  padding: 10px 5px;
+  border: none;
+  background-color: #fff;
+  font-size: 18px;
+  flex: 1;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.todo-app-container .create-todo input:focus {
+  outline: 1px solid #2c3e50;
+}
+.todo-app-container .create-todo button {
+  background-color: #d80048;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  cursor: pointer;
+}
+.todo-app-container .create-todo button:hover {
+  background-color: #ff1563;
+}
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+.task-container span:first-child {
+  flex: 1;
+  display: inline-block;
+  padding: 10px;
+  word-break: break-word;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.task-container span ~ span,
+.task-container span:last-child {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+}
+.task-container span ~ span {
+  background-color: #00b862;
+}
+.task-container span:last-child {
+  background-color: #f0013c;
+  text-decoration: line-through;
+}
+.delete-all {
+  background-color: #0082d8;
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding: 5px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  cursor: pointer;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.todo-app-container .create-todo button:hover {
+  background-color: #0e8aff;
 }
 
+@media (min-width: 0px) and (max-width: 800px) {
+  .todo-app-container {
+    width: 100%;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+  }
+  .todo-app-container .create-todo button {
+    font-size: 16px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 375px) {
+  .todo-app-container .create-todo {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .todo-app-container .create-todo input {
+    width: 100%;
+  }
+  .todo-app-container .create-todo button {
+    width: 50%;
+    padding: 15px;
+  }
+}
